@@ -1,0 +1,344 @@
+*{
+   font-family: 'Times New Roman', Times, serif;
+   margin:0;
+   padding:0;
+    
+}
+body{
+    background-color: azure;
+}
+
+h1{
+   
+    height:50px;
+    text-align:center;
+}
+
+/* Navigation _Bar part*/
+ 
+nav{
+   align-items:center;
+   display:flex;
+   justify-content: flex-end ;
+   flex-wrap:wrap;
+   padding: 10px 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;                /* makes items horizontal */
+    justify-content: flex-end;    /* pushes items to the right */
+    gap: 20px;                    /* spacing between items */
+}
+
+/* Links */
+nav ul li a {
+    text-align: right;
+    text-decoration: none;
+    color: #dd0000;
+    font-weight: bold;
+    font-size: larger;
+    transition: color 0.34s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #007BFF; /* hover effect */
+}   
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;            /* distance below text */
+    width: 0;
+    height: 2px;
+    background-color: #b31545; /* underline color */
+    transition: width 0.3s ease-in-out;
+}
+nav ul li a:hover::after {
+    width: 100%;   /* underline animates */
+}
+
+/* Hero Section */
+.hero {
+  background-color: #1341a3;      /* black background */
+  background-image: linear-gradient(to bottom, #82a1e2, #9be196);
+  color: #fff;                 /* white text */
+  padding: 70px 0px;
+  text-align: left;            /* align text to the left */
+  height: 180px;  /* this is new change*/             /* full screen height */
+}
+.hero p{
+  font-size: 40px;
+  color: #c70c0c;     /* grayish subtitle */
+  margin: 5px 0 20px 0;
+}
+
+.hero h2 {
+  margin-top:1%;
+  font-size: 28px;
+  font-weight: bold;
+   
+}
+/* hero socil media */
+.hero div a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:30px;
+  width: 50px;              /* circle size */
+  height: 50px;
+  
+  border-radius: 30%;       /* makes them circular */
+  background: #16a3a8;         /* white background */
+  font-size: 32px;          /* icon size */
+  color: #dddada;              /* default icon color */
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(85, 9, 9, 0.2);
+  transition: all 0.3s ease;
+}
+
+.hero div a:hover {
+    background: #7a0870;
+}
+
+
+
+.highlight {
+  color: #a9c55c;   /* choose your color (red here) */
+  font-weight: bold;
+}
+.profile-pic {
+    
+    flex: 2;
+    display: flex;
+    justify-content: right;  /* centers image inside its column */
+    align-items: flex-start; /* move upward */
+    margin-top: -160px;       /* fine tune upward shif*/
+
+}
+.profile-pic img {
+    margin-top:-50px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 70%;  /* makes it a circle */
+    border: 5px solid #00ff9d; /* optional border */
+}
+ 
+/*  empty */
+
+
+/* ---- Service  Section---*/
+.sub-title{
+    text-align:left;
+
+}
+#services{
+    padding-top :30px;
+
+}
+.services-list{
+    display:grid;
+     
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-gap:30px;
+    margin-top:20px ;
+    gap:30px;
+     
+}
+.services-list div{
+    background: hsl(280, 8%, 85%);
+    padding:20px;
+    
+    font-weight: 300px;
+    border-right:10px;
+    min-height: 250px;   
+     
+
+}
+.services-list div h2{
+    text-align:center;
+    
+    margin-bottom:10px;
+
+}
+.services-list div p{
+   
+    font-size: 17px;
+    line-height: 2.5;       /* tighter spacing */
+    margin-bottom: 25px;
+   
+}
+.services-list div a{
+    text-decoration:none;
+    color:#8290e2;
+    font-size:13px;
+    margin-top: 20px;
+    
+    display: inline-block;
+}
+.services-list div:hover{
+    background-color:rgb(209, 157, 219) ;
+}
+#Portfolio{
+    padding:50px 0;
+}
+.work-list{
+
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-gap:30px;
+    margin-top:30px ;
+}
+.work{
+    text-align: center; 
+    border-radius:10px;
+    position:relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin-bottom: 10px;  
+}
+
+.work img{
+    width:100%;
+    height: 450px;            /* fixed equal height */
+    object-fit: cover;  /* this is for 3images alignmnets same rakar jono*/
+    border-radius: 5px;
+    
+}
+.work h3 {
+  font-size: 25px;
+  color: #252020;
+  text-align: center;
+}
+
+.work p {
+  font-size: 25px;
+  color: #b82020;
+  text-align: left;
+
+}
+/* */
+.skills{
+   
+    text-align: center;
+    padding: 40px 0;
+}
+.skills h3 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+.skills-list {
+  display: flex;
+   
+  justify-content: center;
+  gap: 20px;
+}
+.skill {
+  width: 120px;
+  height: 120px;
+  background: #65429e;                  /* dark background */
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  clip-path: polygon(
+    50% 0%, 93% 25%, 93% 75%, 
+    50% 100%, 7% 75%, 7% 25%
+  );                                /* makes hexagon */
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Different border colors */
+.skill:nth-child(1) { border-color: #ff6f61; }
+.skill:nth-child(2) { border-color: #00bcd4; }
+.skill:nth-child(3) { border-color: #ff9800; }
+.skill:nth-child(4) { border-color: #2196f3; }
+.skill:nth-child(5) { border-color: #8bc34a; }
+
+/* Hover effect */
+.skill:hover {
+  transform: scale(1.1);
+  background: #8f0c7d;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
+}
+
+.skills .subtitle {
+  font-size: 50px;
+  color: #666;
+  margin-bottom: 25px;
+}
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f0f1f7, #764ba2);
+  color: #0e6fca;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  font-size: 2cqmin;
+  margin-bottom: 30px;
+  color: #0c16a5;
+}
+
+/* Contact Container */
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Form */
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 70%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* Button */
+.contact-form button {
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #e85a4f;
+  transform: scale(1.05);
+}
